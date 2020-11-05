@@ -15,8 +15,14 @@ _global_script_class_icons={
 
 [application]
 
-config/name="spacecard"
+config/name="Space Cards"
+config/description="And adventure in space"
+run/main_scene="res://Screen/main_screen.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/resizable=false
 
 [rendering]
 
