@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Object/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Object/board.gd" type="Script" id=2]
+
+[node name="board" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Card00" parent="." instance=ExtResource( 1 )]
+position = Vector2( 107, 167 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "0,0"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="Card01" parent="." instance=ExtResource( 1 )]
+position = Vector2( 292, 167 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "0,1"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="Card02" parent="." instance=ExtResource( 1 )]
+position = Vector2( 476, 167 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "0,2"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="Card10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 107, 419 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "1,0"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="Card11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 292, 419 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = "Player"
+Card_position = "1,1"
+Card_type = "Player"
+Card_HP = "0"
+Card_ATC = "0"
+
+[node name="Card12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 476, 419 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "1,2"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="Card13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 107, 675 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "2,0"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="Card14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 292, 675 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "2,1"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="Card15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 476, 675 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "2,2"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="CardNew" parent="." instance=ExtResource( 1 )]
+position = Vector2( -150, -155 )
+scale = Vector2( 0.4, 0.4 )
+Card_name = ""
+Card_position = "2,2"
+Card_type = ""
+Card_HP = ""
+Card_ATC = ""
+
+[node name="NewCard" type="Tween" parent="."]
+
+[node name="OldCard" type="Tween" parent="."]

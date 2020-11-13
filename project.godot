@@ -17,11 +17,17 @@ _global_script_class_icons={
 
 config/name="Space Cards"
 config/description="And adventure in space"
-run/main_scene="res://Screen/main_screen.tscn"
+run/main_scene="res://Screen/testView.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+BoardData="*res://AutoLoad/boardData.gd"
 
 [display]
 
+window/size/width=600
+window/size/height=800
 window/size/resizable=false
 
 [rendering]
