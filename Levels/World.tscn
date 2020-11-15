@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Object/Star.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Screen/Background_platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Actors/PlayerBlock.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Object/MoveBox.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Object/BackBack.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Object/BigLight.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Object/BigLight_180.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
 
 [node name="BackBack" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1119, 510 )
@@ -15,7 +19,7 @@ scale = Vector2( 2, 1 )
 [node name="Background" parent="." instance=ExtResource( 2 )]
 
 [node name="PlayerBlock" parent="." instance=ExtResource( 3 )]
-position = Vector2( 190, 369 )
+position = Vector2( 190, 259 )
 
 [node name="Star" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1250, 540 )
@@ -38,3 +42,15 @@ position = Vector2( 286, 444 )
 [node name="MoveBox" parent="." instance=ExtResource( 4 )]
 position = Vector2( 916, 748 )
 scale = Vector2( 1.75, 1.75 )
+
+[node name="Light2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 127.1, 218.862 )
+color = Color( 0.796078, 0.227451, 0.27451, 1 )
+shadow_color = Color( 0.796078, 0.227451, 0.27451, 0 )
+shadow_gradient_length = 0.0
+shadow_filter_smooth = 64.0
+
+[node name="Light2D2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1564.15, 221.749 )
+color = Color( 0.796078, 0.227451, 0.27451, 1 )
+energy = 0.75

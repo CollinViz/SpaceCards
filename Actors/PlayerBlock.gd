@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var anim_player = $AnimationPlayer
-
+var playLading = "land"
 export (int) var speed = 600
 export (int) var jump_speed = -1000
 export (int) var gravity = 3000
@@ -32,16 +32,25 @@ func _physics_process(delta):
 		if move_dir == 0:
 			if anim_player.is_playing() and anim_player.current_animation =="jump":
 				play_anim("land")
+				playLading = "land"
 			else:
-				play_anim("start")
+				play_anim(playLading)
 		if move_dir == 1:
 			play_anim("run_left")
+			playLading= "start"
 		if move_dir == -1:
 			play_anim("run_right")
+			playLading= "start"
 	else:
 		play_anim("jump")
+		playLading = "land"
 
 func play_anim(anim_name):
 	if anim_player.is_playing() and anim_player.current_animation == anim_name:
 		return
 	anim_player.play(anim_name)
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name=="land":
+		playLading = "start"
